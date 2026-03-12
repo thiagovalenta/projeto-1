@@ -7,7 +7,7 @@ body {
 
 }
 .Menu{
-    background-color: rgb(34, 34, 172);
+    background-color: rgb(55, 30, 165);
     padding: 15px 0;
     position: sticky; /*menu fixo, sempre no topo*/
     top: 0; /*posição 0- posição acima*/
@@ -62,6 +62,12 @@ body {
     font-style: italic;
     color: rgb(168, 146, 18);
 }
+.principal{
+    max-width: 900px;
+    margin: -40px auto 40px;
+    padding: 20px;
+
+    }
 .cabecalho-logo{
     border-radius: 10px;
 }
