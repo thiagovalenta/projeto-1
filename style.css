@@ -7,7 +7,7 @@ body {
 
 }
 .Menu{
-    background-color: rgb(55, 30, 165);
+    background-color: #2a5298;
     padding: 15px 0;
     position: sticky; /*menu fixo, sempre no topo*/
     top: 0; /*posição 0- posição acima*/
@@ -106,7 +106,7 @@ body {
     gap: 20px;
     font-size: 15px;
     background-color: rgb(208, 211, 241);
-    padding: 25px 20px;
+    padding: 25px 30px;
     border-radius: 10px;
     box-shadow: inset rgb(119, 119, 238) 4px 0 0; /*sombra interna*/
 }
@@ -114,7 +114,7 @@ body {
     gap: 20px;
     font-size: 15px;
     background-color: rgb(208, 211, 241);
-    padding: 25px 20px;
+    padding: 25px 30px;
     border-radius: 10px;
     box-shadow: inset rgb(119, 119, 238) 4px 0 0; /*sombra interna*/
 }
@@ -128,7 +128,7 @@ body {
     margin: 120px auto -120px;
 }
 .um{
-     background-color: rgb(208, 211, 241);
+     background-color: rgb(208, 241, 210);
      border-radius: 5px;
      padding: 0.05px 2px;
      color: green;
@@ -137,7 +137,7 @@ body {
     
 }
 .dois{
-    background-color: rgb(208, 211, 241);
+    background-color: rgb(208, 241, 210);
     border-radius: 5px;
     padding: 0.05px 2px;
     color: green;
@@ -145,14 +145,12 @@ body {
     font-weight: bold;
 }
 .tres{
-    background-color: rgb(208, 211, 241);
+    background-color: rgb(208, 241, 210);
     border-radius: 5px;
     padding: 0.05px 2px;
     color: green;
     margin: 20px auto -20px;
-    font-weight: bold;
-    
-    
+    font-weight: bold;    
 }
 section {
   
@@ -195,6 +193,9 @@ th, td{/*celulas cabeçalho e corpo*/
 th{
     background-color: #2a5298;
 }
+tr :hover{
+ background-color: #f0ebeb;
+}
 .box-amarela{
     width: 25px;
     height: 25px;
@@ -204,10 +205,10 @@ th{
 .itens{
     align-items: center;
     gap: 10px;
-    background-color: rgb(248, 228, 163);
+    background-color: rgb(238, 222, 164);
     padding: 10px;
     border-radius: 10px;
-    border: 2px solid yellow;
+    border: 2px solid rgb(197, 170, 50);
     border-style: dashed;
 }
 .suplementos{
@@ -219,5 +220,15 @@ h4{
     color: rgb(158, 145, 23);
 }
 .M{
-    border-left: 5px solid #e0f004;
+    border-left: 5px solid #a5a202;
+    background-color:  rgb(250, 239, 205);
+}
+footer{
+    background-color: #2a5298;
+    border-top:solid #f1ee04;
+    text-align: center;
+    color: aliceblue;
+    gap: 10px;
+    padding: 30px;
+    margin-top: 150px;
 }
