@@ -7,7 +7,7 @@ body {
 
 }
 .Menu{
-    background-color: #2a5298;
+    background-color: rgb(55, 30, 165);
     padding: 15px 0;
     position: sticky; /*menu fixo, sempre no topo*/
     top: 0; /*posição 0- posição acima*/
@@ -106,7 +106,7 @@ body {
     gap: 20px;
     font-size: 15px;
     background-color: rgb(208, 211, 241);
-    padding: 25px 30px;
+    padding: 25px 20px;
     border-radius: 10px;
     box-shadow: inset rgb(119, 119, 238) 4px 0 0; /*sombra interna*/
 }
@@ -114,7 +114,7 @@ body {
     gap: 20px;
     font-size: 15px;
     background-color: rgb(208, 211, 241);
-    padding: 25px 30px;
+    padding: 25px 20px;
     border-radius: 10px;
     box-shadow: inset rgb(119, 119, 238) 4px 0 0; /*sombra interna*/
 }
@@ -128,7 +128,7 @@ body {
     margin: 120px auto -120px;
 }
 .um{
-     background-color: rgb(208, 241, 210);
+     background-color: rgb(208, 211, 241);
      border-radius: 5px;
      padding: 0.05px 2px;
      color: green;
@@ -137,7 +137,7 @@ body {
     
 }
 .dois{
-    background-color: rgb(208, 241, 210);
+    background-color: rgb(208, 211, 241);
     border-radius: 5px;
     padding: 0.05px 2px;
     color: green;
@@ -145,12 +145,14 @@ body {
     font-weight: bold;
 }
 .tres{
-    background-color: rgb(208, 241, 210);
+    background-color: rgb(208, 211, 241);
     border-radius: 5px;
     padding: 0.05px 2px;
     color: green;
     margin: 20px auto -20px;
-    font-weight: bold;    
+    font-weight: bold;
+    
+    
 }
 section {
   
@@ -193,14 +195,43 @@ th, td{/*celulas cabeçalho e corpo*/
 th{
     background-color: #2a5298;
 }
-tr :hover{
- background-color: #f0ebeb;
-}
 .box-amarela{
     width: 25px;
     height: 25px;
     border-radius: 4px;
     background: yellow;
+}
+.itens{
+    align-items: center;
+    gap: 10px;
+    background-color: rgb(248, 228, 163);
+    padding: 10px;
+    border-radius: 10px;
+    border: 2px solid yellow;
+    border-style: dashed;
+}
+.suplementos{
+   padding: 20px 30px;
+   background-color: rgb(255, 228, 228);
+   border-left: red 5px solid;
+}
+h4{
+    color: rgb(158, 145, 23);
+}
+.M{
+    border-left: 5px solid #e0f004;
+    background: #fdffdd;
+}
+.etapa{
+    display: flex;
+    padding: 0%;
+    gap: 2px;
+}
+.etapas{
+    border-left: 5px solid #2a5298;
+    background: #e7ecf5;
+    border-radius: 5px;
+    padding: 20px 15px;
 }
 .box-cinza {
     width: 25px; height: 25px;
@@ -242,36 +273,6 @@ tr :hover{
     border-radius: 4px;
     background: red;
 }
-.itens{
-    align-items: center;
-    gap: 10px;
-    background-color: rgb(238, 222, 164);
-    padding: 10px;
-    border-radius: 10px;
-    border: 2px solid rgb(197, 170, 50);
-    border-style: dashed;
-}
-.suplementos{
-   padding: 20px 30px;
-   background-color: rgb(255, 228, 228);
-   border-left: red 5px solid;
-}
-h4{
-    color: rgb(158, 145, 23);
-}
-.M{
-    border-left: 5px solid #a5a202;
-    background-color:  rgb(250, 239, 205);
-}
-footer{
-    background-color: #2a5298;
-    border-top:solid #f1ee04;
-    text-align: center;
-    color: aliceblue;
-    gap: 10px;
-    padding: 30px;
-    margin-top: 150px;
-}
 .evento{
     margin-bottom: 25px;/*espacamento fora da borda*/
     position: relative;/*"flutuar na página"*/
@@ -306,3 +307,39 @@ footer{
     color: #1b396d;
     margin-top: 0;
 }
+.formato tr{
+    gap: 10px;
+}
+.ul{
+    list-style: none;
+    padding: 0;
+    gap: 2px;
+}
+.li{
+    background: #e3edfc;
+    padding: 2px;
+    margin-bottom: 5px;
+    border-radius: 8px;
+    border-left: 5px solid rgb(40, 40, 167);
+}
+.mascote{
+    list-style: none;
+    padding: 5px;
+    color: rgb(158, 145, 23);
+}
+.mascote li{
+    padding: 10px;
+    
+}
+.coluna{
+    flex: 1;
+}
+.u{
+    list-style: none;
+}
+.tabela{
+  display: flex;
+}
+
+
+   
