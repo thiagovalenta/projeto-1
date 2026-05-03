@@ -3,106 +3,92 @@ function calcular(){
             //js é uma linguagem n tipada, n tem tipo de dados
             //Number()-converte texto em nmr
             //recupera o valor dos itens avulsos
-            let qtdeArroz = Number(document.getElementById("qtdeArroz").value)//recupera o valor informado no elemnto com id
-            let qtdeFeijao = Number(document.getElementById("qtdeFeijao").value) //recupera o valor informado no elemnto com id
-            let qtdeOleo = Number (document.getElementById("qtdeOleo").value)
-            let qtdeMacarrao = Number (document.getElementById("qtdeMacarrao").value)
-            //calcula o valor total itens avulsos
-            let pontos = (qtdeArroz * 10) + (qtdeFeijao * 8) + (qtdeOleo * 4) + (qtdeMacarrao * 2)
-            //metas
-            //recupera a cor da equipe
-            let cor = document.getElementById("cor").value
-            let metakit//decara meta de kit
-            if (cor == "amarela"){
-                metakit= 54
-               
-            }
-            else if ( cor == "cinza"){
-                metakit=51
-                 
-            }
-            else if (cor == "laranja"){
-                metakit= 21
-        
-            }
-            else if (cor == "marrom"){
-                metakit = 88
-                
-            }
-            else if( cor =="preta"){
-                metakit= 60
-                
-            }
-            //calcula meta de suplemento e do leite
-            let metasuplemento //decara meta de suplemento
-            let metaleite = metakit
+    let qtdeArroz = Number(document.getElementById("qtdeArroz").value) // recebe o valor escolhido pelo usuario
+    let qtdeFeijao = Number(document.getElementById("qtdeFeijao").value)
+    let qtdeMacarrao = Number(document.getElementById("qtdeMacarrao").value)
+    let qtdeoleo = Number(document.getElementById("qtdeoleo").value)
+    let pontos = (qtdeArroz * 10) + (qtdeFeijao * 8) + (qtdeMacarrao * 4)+ (qtdeoleo * 2)
+    let cor = document.getElementById("cor").value // recebe a variavel pro java
+   let metakit // meta kit de alimentação por equipe 
+    if (cor == "verde") {  
+    metakit = 61
+     }
+    else if ( cor == "vermelho") {
+    metakit = 32 
+    } 
+    else if( cor == "laranja") {
+    metakit = 21
+} 
+    else if(cor == "preto") { 
+    metakit = 60
+} 
+    else if(cor == "amarelo") { 
+    metakit = 27
+} 
+    else if(cor == "cinza" ) { 
+    metakit = 26
+}
+    else if(cor == "marrom") { 
+    metakit = 44
+}
+    else if(cor == "rosa") { 
+    metakit = 22
+}
+    else if(cor =="roxo" ) { 
+    metakit = 21
+}
 
-            if (metakit % 2==0) {//par
-                metasuplemento = metakit
-            }
-            else {//impar
-                metasuplemento = (metakit / 2) + 1
-            }
-            let metasangue = metasuplemento
-            let kitAlimentacao= Number(document.getElementById("kitAlimentacao").value)
-            if (kitAlimentacao >= metakit){
-                pontos = pontos + 5000
-            
-                if(kitAlimentacao >  metakit){
-                    //ganhamos a mais de pontos por itens que ultrapassamos
-                    pontos = pontos + (kitAlimentacao - metakit) * (5000/metakit)
-                }
+let qtdeKits = Number(document.getElementById("qtdeKits").value)
+if (qtdeKits >= metakit ) {  // bateu a meta 
+    pontos = pontos + 5000  // acumulador
+    if(qtdeKits > metakit){ // maior que a meta 
+        pontos = pontos + (qtdeKits - metakit) * (5000/metakit)
+    }
+} 
+else { // nao bateu a meta 
+    pontos = pontos + (qtdeKits) * (5000/metakit)
+}
 
-            }
-            else {
-                pontos = pontos + kitAlimentacao * (5000 / metaprova1)
-            }
-            //vms exibir o resultado p o usuário
-            let qtdelatas = Number (document.getElementById(qtdelatas).value)
-            if (qtdelatas >= metasuplemento){
-                pontos = pontos + 5000
-                if (qtdelatas > metasuplemento){
-                    pontos = pontos + (qtdelatas - metasuplemento)* (5000/metasuplemento)
-                }
+let metaSuplemento 
+if (metakit % 2 == 0) { 
+    metaSuplemento = metakit / 2
+}
+else { 
+    metaSuplemento = (metakit / 2) + 0.5
+}
+let qtdeSuplemento = Number(document.getElementById("qtdeSuplemento").value)
+if(qtdeSuplemento >= metaSuplemento) { 
+    pontos = pontos + 5000 
+    if(qtdeSuplemento > metaSuplemento) { 
+        pontos = pontos + (qtdeSuplemento - metaSuplemento) * (5000/metaSuplemento)
+    }
+}
+else { 
+    pontos = pontos + qtdeSuplemento * (5000/metaSuplemento)
+}
+let metaLeite = metakit 
+let qtdeLeite = Number(document.getElementById("qtdeLeite").value) 
+if(qtdeLeite >= metaLeite) { 
+    pontos = pontos + 5000 
+    if(qtdeLeite > metaLeite){ 
+        pontos = pontos + (qtdeLeite - metaLeite) * (5000/metaLeite) 
+    }
+}
+else { 
+    pontos = pontos + qtdeLeite * (5000/metaLeite)
+}
 
-            }
-            else {
-                pontos = pontos + (qtdelatas * (5000/metasuplemento))
-            }
-            //calcula a pontuação de leite
-            let qtdeLeite = Number (document,getElementById("qtdeLeite").value)
-             if (cor == "amarela"){
-                metaleite= 54
-               
-            }
-            else if ( cor == "cinza"){
-                metaleite=51
-                 
-            }
-            else if (cor == "laranja"){
-                metaleite= 21
-        
-            }
-            else if (cor == "marrom"){
-                metaleite = 88
-                
-            }
-            else if( cor =="preta"){
-                metaleite= 60
-                
-            }
+let metaSangue = metaSuplemento 
+let qtdeSangue = Number(document.getElementById("qtdeSangue").value) 
+if(qtdeSangue >= metaSangue) { 
+    pontos = pontos + 5000 
+    if(qtdeSangue > metaSangue){ 
+        pontos = pontos + (qtdeSangue - metaSangue) * (5000/metaSangue) 
+    }
+}
+else { 
+    pontos = pontos + qtdeSangue * (5000/metaSangue)
+}
 
-            //cacula a doação de sangue
-            let qtdeDoacao = Number (document,getElementById("qtdeDoacao").value)
-            if (metakit % 2==0) {//par
-                metasangue = metakit
-            }
-            else {//impar
-                metasangue = (metakit / 2) + 1
-            }
-            
-
-
-
-            document.getElementById("resultado").innerText = "Pontuação Total: " + pontos.toFixed(2) +" pontos"
-        }
+document.getElementById("result").innerText = "Pontuação: " + pontos.toFixed(2)
+}

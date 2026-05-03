@@ -6,8 +6,58 @@ body {
 
 
 }
+
+.btn {
+  padding: 12px 25px;
+  background: var(--secondary);
+  border: none;
+  border-radius: 10px;
+  color: white;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.btn a{
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+}
+.btn:hover {
+  background: var(--accent);
+}
+
+/* CARDS */
+.container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  padding: 40px;
+}
+.container a{
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+    font-size: larger;
+}
+.card {
+    background: var(--card);
+    padding: 25px;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+    transition: transform 0.3s;
+    
+}
+
+.card:hover {
+  transform: translateY(-10px);
+}
+
+.card h3 {
+  margin-bottom: 10px;
+  color: var(--accent);
+}
+
 .Menu{
-    background-color: rgb(55, 30, 165);
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border-radius: 15px;
     padding: 15px 0;
     position: sticky; /*menu fixo, sempre no topo*/
     top: 0; /*posição 0- posição acima*/
@@ -23,7 +73,8 @@ body {
     padding: 0 20px;
 }
 .menu-logo{
-    color: white;
+    
+    color: rgb(1, 9, 85);
     text-decoration: none; /*link sem sublinhamento*/
     font-weight: bold; /*negrito*/
     font-size: 1, 2rem; /*1, 2 *16px*/
@@ -37,7 +88,7 @@ body {
     padding: 0;/*barra curta*/
 }
 .lista a{
-    color: #cbdcf7;
+    color: #001f50;
     text-decoration: none;
     font-size: 0,9rem;/*1 rem = 16 pixel*/
     font-weight: 500;/*"peso" da fonte*/
@@ -47,8 +98,8 @@ body {
     color: antiquewhite;
 }
 .cabecalho{
-    background-color: rgb(24, 23, 80);
-    color: #fff;
+    background-color: rgb(12, 2, 58);
+    color: #ffffff;
     padding: 60px 20px;
     margin: none;
     text-align: center;
@@ -60,7 +111,7 @@ body {
 .cabecalho h2{
     font-weight: 300;
     font-style: italic;
-    color: rgb(168, 146, 18);
+    color: #ffffff
 }
 .principal{
     max-width: 900px;
@@ -72,7 +123,6 @@ body {
     border-radius: 10px;
 }
 .missao-valores{
-    background-color: rgb(236, 233, 228);
     padding: 40px 25px;
     border-radius: 20px;
     gap: 10px;
@@ -84,22 +134,13 @@ body {
     gap: 10px;
     font-size: 15px;
 }
-.objetivos{
-    background-color: rgb(236, 233, 228);
-    padding: 25px 30px;
-    border-radius: 20px;
-    gap: 10px;
-    text-align: left;
-    box-shadow: #a3a0a0 2px 2px 2px;
-    margin: 40px auto -40px;
-}
 .data{
     display: flex;
     padding: 20px 20px;
-    background-color: rgb(236, 233, 228);
+    background-color: rgb(255, 255, 255);
     border-radius: 20px;
     gap: 10px;
-    margin: 80px auto -80px;
+    margin: auto ;
     box-shadow: #a3a0a0 2px 2px 2px;
 }
 .data-container{
@@ -113,25 +154,21 @@ body {
 .encerramento{
     gap: 20px;
     font-size: 15px;
-    background: white;
+    background-color: rgb(208, 211, 241);
     padding: 25px 20px;
     border-radius: 10px;
     box-shadow: inset rgb(119, 119, 238) 4px 0 0; /*sombra interna*/
 }
 .momento{
-    background-color: rgb(236, 233, 228);
-    padding: 30px 20px;
-    border-radius: 20px;
     gap: 10px;
     text-align: left;
-    box-shadow: #a3a0a0 2px 2px 2px;
-    margin: 120px auto -120px;
+    margin: 20px auto -20px ;
 }
 .um{
      background-color: rgb(208, 211, 241);
      border-radius: 5px;
      padding: 0.05px 2px;
-     color: green;
+     color:  rgb(12, 2, 58);
      margin: 5px auto 5px;
      font-weight: bold;
     
@@ -140,7 +177,7 @@ body {
     background-color: rgb(208, 211, 241);
     border-radius: 5px;
     padding: 0.05px 2px;
-    color: green;
+    color:  rgb(12, 2, 58);
     margin: 10px auto -10px;
     font-weight: bold;
 }
@@ -148,14 +185,14 @@ body {
     background-color: rgb(208, 211, 241);
     border-radius: 5px;
     padding: 0.05px 2px;
-    color: green;
+    color:  rgb(12, 2, 58);
     margin: 20px auto -20px;
     font-weight: bold;
     
     
 }
 section {
-  
+    margin: auto;
     background: white;
     margin-bottom: 20px;
     padding: 25px;
@@ -193,7 +230,8 @@ th, td{/*celulas cabeçalho e corpo*/
     border-bottom: 1px solid #ddd;
 }
 th{
-    background-color: #2a5298;
+    background-color:  rgb(12, 2, 58);
+    color: white;
 }
 .box-amarela{
     width: 25px;
@@ -212,14 +250,14 @@ th{
 }
 .suplementos{
    padding: 20px 30px;
-   background-color: rgb(255, 228, 228);
-   border-left: red 5px solid;
+   background-color: rgb(231, 228, 255);
+   border-left: 5px solid  rgb(12, 2, 58);
 }
 h4{
     color: rgb(158, 145, 23);
 }
 .M{
-    border-left: 5px solid #e0f004;
+    border-left: 5px solid  rgb(12, 2, 58);
     background: #fdffdd;
 }
 .etapa{
@@ -228,7 +266,7 @@ h4{
     gap: 2px;
 }
 .etapas{
-    border-left: 5px solid #2a5298;
+    border-left: 5px solid  rgb(12, 2, 58);
     background: #e7ecf5;
     border-radius: 5px;
     padding: 20px 15px;
@@ -288,7 +326,7 @@ h4{
     top: 5px;
 }
 .timeline{
-    border-left: 3px solid #1b396d;
+    border-left: 3px solid rgb(12, 2, 58);
     padding-left: 20px;
     margin-top: 20px;
 }
@@ -304,7 +342,7 @@ h4{
     border: 1px solid #ccc8c8;
 }
 .unidade h4{
-    color: #1b396d;
+    color:  rgb(12, 2, 58);
     margin-top: 0;
 }
 .formato tr{
@@ -320,7 +358,7 @@ h4{
     padding: 2px;
     margin-bottom: 5px;
     border-radius: 8px;
-    border-left: 5px solid rgb(40, 40, 167);
+    border-left: 5px solid  rgb(12, 2, 58);
 }
 .mascote{
     list-style: none;
@@ -339,9 +377,37 @@ h4{
 }
 .tabela{
   display: flex;
+  color: rgb(158, 145, 23);
 }
-/*30/03*/
-    
+footer {
+    background-color:rgb(12, 2, 58);
+    border-top: solid #ffd000;
+    text-align: center;
+    color: white;
+    gap: 10px;
+    padding: 30px;
+}
+.index{
+    color: rgb(0, 0, 0);
+    font-size: 0.9rem;
+    margin-top: 10px;
+    justify-content: center;
+    align-items:self-end;
+    gap: 10px;
+    gap: 100px;
+    display:flex;
+}
+
+.indexzero{
+    font-family: 'Segoe UI', sans-serif;
+    color: rgb(12, 2, 58);
+    font-size:x-large;
+}
+
+.index-logo{
+    width: 150px;
+
+}
 .form-group{
      margin-bottom: 15px;
     display: flex;
@@ -370,15 +436,3 @@ button {
     font-weight: bold;
     font-size: 1.2rem;
 }
-footer{
-    border-top:solid  #e0f004;
-    background-color: #1b396d;
-    text-align: center;
-    color: white;
-    gap: 10px;
-    padding: 30px;
-}
-
-
-
-   
